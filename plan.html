@@ -10,8 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
         body { font-family: 'Lexend', sans-serif; }
         .done { text-decoration: line-through; opacity: 0.5; }
-        .task-item { cursor: pointer; transition: all 0.2s; }
-        .task-item:hover { background: #f8fafc; }
+        .task-item { transition: all 0.2s; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 leading-relaxed">
@@ -33,106 +32,167 @@
 
     <main class="max-w-4xl mx-auto px-6 py-12">
         <h1 class="text-4xl font-extrabold mb-4 italic text-slate-900 uppercase">Lộ trình triển khai (Sprint Plan)</h1>
-        <p class="text-slate-500 mb-12 italic underline decoration-blue-500 underline-offset-4 font-bold">Quản lý tiến độ dự án thực tế</p>
+        <p class="text-slate-500 mb-12 italic underline decoration-blue-500 underline-offset-4 font-bold">Data-Driven Management System</p>
 
         <div class="space-y-8">
             <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-blue-600 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 1</div>
-                <h3 class="text-xl font-bold mb-6 text-blue-600 uppercase"><i class="fas fa-database mr-3"></i>Data Foundation</h3>
-                <div class="space-y-4">
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-blue-400 text-lg"></i>
-                        <span class="text-sm font-medium">Thiết lập Master Sheet Database (GiangVien, LopHoc, SinhVien)</span>
+                <h3 class="text-xl font-bold mb-6 text-blue-600 uppercase"><i class="fas fa-database mr-3"></i>Giai đoạn 1: Xây dựng "Xương sống" dữ liệu</h3>
+                <div class="space-y-3">
+                    <div id="task-S1.1" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-blue-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 1.1: Thiết kế Master Sheet (Database)</p>
+                            <p class="text-xs text-slate-500 italic">Tạo file Google Sheet với các Tab: GiangVien, LopHoc, SinhVien, DiemDanh, TienDo_Lab_Quiz.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-blue-400 text-lg"></i>
-                        <span class="text-sm font-medium">Viết hàm CRUD cơ bản trong Apps Script</span>
+                    <div id="task-S1.2" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-blue-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 1.2: Viết Apps Script định nghĩa hàm CRUD</p>
+                            <p class="text-xs text-slate-500 italic">Xây dựng API cơ bản để Thêm/Sửa/Xóa dữ liệu trực tiếp từ Sheet.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-blue-400 text-lg"></i>
-                        <span class="text-sm font-medium">Khởi tạo Dashboard quản trị trên AppSheet</span>
+                    <div id="task-S1.3" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-blue-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 1.3: Thiết lập AppSheet Dashboard cơ bản</p>
+                            <p class="text-xs text-slate-500 italic">Tạo giao diện nhập liệu đầu tiên cho Giảng viên trên AppSheet.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-slate-900 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 2</div>
-                <h3 class="text-xl font-bold mb-6 text-slate-900 uppercase"><i class="fas fa-robot mr-3"></i>Drive & Chat Bot</h3>
-                <div class="space-y-4">
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Script tự động hóa tạo Folder Lab trên Drive</span>
+                <h3 class="text-xl font-bold mb-6 text-slate-900 uppercase"><i class="fas fa-robot mr-3"></i>Giai đoạn 2: Tự động hóa Drive & Chat Bot</h3>
+                <div class="space-y-3">
+                    <div id="task-S2.1" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 2.1: Script tự động hóa cấu trúc Folder Drive</p>
+                            <p class="text-xs text-slate-500 italic">Tự động tạo Folder môn học và 8 Folder Lab khi có lớp mới.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Phát triển Google Chat Bot: Nhận lệnh /lab và nộp bài</span>
+                    <div id="task-S2.2" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 2.2: Cấu hình Google Chat API</p>
+                            <p class="text-xs text-slate-500 italic">Kết nối Apps Script với Google Chat để nhận lệnh điều khiển.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Tự động đổi tên file đúng chuẩn PSxxxx_Ten_Labx</span>
+                    <div id="task-S2.3" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 2.3: Phát triển lệnh /lab cho Bot</p>
+                            <p class="text-xs text-slate-500 italic">Bot nhận link bài nộp, kiểm tra quyền và đổi tên file đúng chuẩn PSxxxx.</p>
+                        </div>
+                    </div>
+                    <div id="task-S2.4" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 2.4: Viết Script quét bài nộp tự động</p>
+                            <p class="text-xs text-slate-500 italic">Quét Drive và cập nhật trạng thái "Đã nộp" vào Sheet TienDo_Lab_Quiz.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-slate-900 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 3</div>
-                <h3 class="text-xl font-bold mb-6 text-slate-900 uppercase"><i class="fas fa-satellite mr-3"></i>Check-in & Reminder</h3>
-                <div class="space-y-4">
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Phát triển lệnh /checkin xác thực tọa độ GPS</span>
+                <h3 class="text-xl font-bold mb-6 text-slate-900 uppercase"><i class="fas fa-satellite mr-3"></i>Giai đoạn 3: Điểm danh GPS & Nhắc nhở</h3>
+                <div class="space-y-3">
+                    <div id="task-S3.1" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 3.1: Phát triển lệnh /checkin (GPS)</p>
+                            <p class="text-xs text-slate-500 italic">Tính toán khoảng cách Haversine giữa SV và GV để điểm danh.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Hệ thống Remind tự động quét bài nộp trước 24h deadline</span>
-                    </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Tự động gửi Email nhắc nhở cho sinh viên chưa nộp bài</span>
+                    <div id="task-S3.2" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 3.2: Xây dựng Time-trigger Reminder</p>
+                            <p class="text-xs text-slate-500 italic">Tự động gửi Email/Chat nhắc nhở SV chưa nộp bài vào 22:00 hàng ngày.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
                 <div class="absolute top-0 right-0 bg-slate-900 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 4</div>
-                <h3 class="text-xl font-bold mb-6 text-slate-900 uppercase"><i class="fas fa-chart-line mr-3"></i>Analytics & Sync</h3>
-                <div class="space-y-4">
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Chrome Extension trích xuất điểm Quiz từ LMS ILIAS</span>
+                <h3 class="text-xl font-bold mb-6 text-slate-900 uppercase"><i class="fas fa-chart-line mr-3"></i>Giai đoạn 4: Quiz Sync & Hoàn thiện</h3>
+                <div class="space-y-3">
+                    <div id="task-S4.1" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 4.1: Viết Chrome Extension lấy điểm Quiz</p>
+                            <p class="text-xs text-slate-500 italic">Bóc tách dữ liệu từ ILIAS và đẩy trực tiếp về hệ thống Sheet.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Hoàn thiện báo cáo Dashboard Real-time trên AppSheet</span>
+                    <div id="task-S4.2" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 4.2: Tối ưu hóa AppSheet Dashboard</p>
+                            <p class="text-xs text-slate-500 italic">Thiết kế biểu đồ Real-time cho báo cáo tiến độ tổng thể.</p>
+                        </div>
                     </div>
-                    <div class="task-item flex items-center p-3 rounded-xl border border-transparent" onclick="toggleTask(this)">
-                        <i class="far fa-square mr-4 text-slate-400 text-lg"></i>
-                        <span class="text-sm font-medium">Beta Test trên lớp thực tế và xuất bảng tổng hợp</span>
+                    <div id="task-S4.3" class="task-item flex items-start p-3 rounded-xl border border-transparent">
+                        <i class="far fa-square mt-1 mr-4 text-slate-400"></i>
+                        <div>
+                            <p class="text-sm font-bold">Task 4.3: Kiểm thử Beta trên lớp thực tế</p>
+                            <p class="text-xs text-slate-500 italic">Vận hành thử nghiệm và tinh chỉnh lỗi hệ thống.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
+    <footer class="text-center py-12 text-slate-400 text-xs font-bold tracking-widest border-t mt-12 bg-white uppercase">
+        © 2026 SMART MANAGEMENT SYSTEM - OMG
+    </footer>
+
     <script>
-        function toggleTask(element) {
-            const icon = element.querySelector('i');
-            const span = element.querySelector('span');
-            
-            if (icon.classList.contains('fa-square')) {
-                icon.classList.remove('far', 'fa-square', 'text-slate-400', 'text-blue-400');
-                icon.classList.add('fas', 'fa-check-square', 'text-green-500');
-                span.classList.add('done');
-            } else {
-                icon.classList.remove('fas', 'fa-check-square', 'text-green-500');
-                icon.classList.add('far', 'fa-square', 'text-slate-400');
-                span.classList.remove('done');
+        const SHEET_ID = 'THAY_ID_SHEET_CUA_BAN_TAI_DAY'; 
+        const SHEET_NAME = 'Tasks';
+        const FULL_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}`;
+
+        async function loadProgress() {
+            try {
+                const response = await fetch(FULL_URL);
+                const text = await response.text();
+                const data = JSON.parse(text.substr(47).slice(0, -2));
+                const rows = data.table.rows;
+
+                rows.forEach((row) => {
+                    const taskId = row.c[0]?.v; // Cột A: Task_ID (ví dụ: S1.1)
+                    const status = row.c[2]?.v; // Cột C: Status (Ghi 'Done' để hoàn thành)
+
+                    if (status === 'Done') {
+                        markTaskAsDone(taskId);
+                    }
+                });
+            } catch (error) {
+                console.error('Lỗi khi tải tiến độ:', error);
             }
         }
-    </script>
 
-    <footer class="text-center py-12 text-slate-400 text-xs font-bold tracking-widest border-t mt-12 bg-white">
-        © 2026 SMART MANAGEMENT SYSTEM - ÔNG MƯỜI GIÁO (OMG)
-    </footer>
+        function markTaskAsDone(taskId) {
+            const taskElement = document.getElementById(`task-${taskId}`);
+            if (taskElement) {
+                const icon = taskElement.querySelector('i');
+                const p = taskElement.querySelector('p');
+                const italic = taskElement.querySelector('p.text-xs');
+                
+                icon.classList.remove('far', 'fa-square', 'text-slate-400', 'text-blue-400');
+                icon.classList.add('fas', 'fa-check-square', 'text-green-500');
+                p.classList.add('done');
+                if (italic) italic.classList.add('done');
+            }
+        }
+
+        window.onload = loadProgress;
+    </script>
 </body>
 </html>

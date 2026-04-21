@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề án SmartClass FPL - Ông Mười Giáo (OMG)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+        body { font-family: 'Lexend', sans-serif; }
+        .step-line::before { content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: #e2e8f0; z-index: -1; }
+        .feature-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md border-b z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 p-2 rounded-lg text-white shadow-lg">
+                    <i class="fas fa-microchip text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tighter text-slate-800">SmartClass <span class="text-blue-600">FPL</span></span>
+            </div>
+            <div class="hidden md:block text-right border-l pl-6 border-slate-200">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Đề án Chuyển đổi số</p>
+                <p class="text-sm font-bold text-slate-700 underline decoration-blue-500 underline-offset-4">Tối ưu hóa quản lý giảng dạy</p>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        
+        <section class="mb-20 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight text-slate-900 leading-tight">
+                Hệ thống Quản lý <br><span class="text-blue-600 italic">Lớp học Thông minh</span>
+            </h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Giải pháp tích hợp 100% hệ sinh thái Google nhằm tự động hóa quy trình điểm danh xác thực, kiểm soát tiến độ bài nộp và quản lý điểm tập trung không chi phí vận hành.
+            </p>
+        </section>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 feature-card">
+                <img src="https://www.gstatic.com/images/branding/product/2x/chat_48dp.png" class="w-10 mb-4" alt="Google Chat">
+                <h3 class="font-bold mb-2">Google Chat API</h3>
+                <p class="text-sm text-slate-500">Giao diện tương tác chính cho sinh viên thực hiện điểm danh và nộp bài qua lệnh.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 feature-card">
+                <img src="https://www.gstatic.com/images/branding/product/2x/apps_script_48dp.png" class="w-10 mb-4" alt="Apps Script">
+                <h3 class="font-bold mb-2">Apps Script</h3>
+                <p class="text-sm text-slate-500">Hệ điều phối trung tâm xử lý logic quét Drive, gửi email nhắc nhở và quản lý dữ liệu.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 feature-card">
+                <img src="https://www.gstatic.com/images/branding/product/2x/sheets_48dp.png" class="w-10 mb-4" alt="Sheets">
+                <h3 class="font-bold mb-2">Google Sheets</h3>
+                <p class="text-sm text-slate-500">Hệ quản trị cơ sở dữ liệu quan hệ lưu trữ thông tin sinh viên, điểm danh và bảng điểm.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 feature-card">
+                <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white mb-4">
+                    <i class="fab fa-chrome"></i>
+                </div>
+                <h3 class="font-bold mb-2">LMS Integration</h3>
+                <p class="text-sm text-slate-500">Chrome Extension trích xuất điểm Quiz trực tiếp từ ILIAS đồng bộ về hệ thống.</p>
+            </div>
+        </div>
+
+        <section class="mb-24">
+            <div class="flex items-center space-x-4 mb-16">
+                <h2 class="text-3xl font-bold text-slate-800 uppercase tracking-tighter">Luồng vận hành thực tế</h2>
+                <div class="h-1 flex-grow bg-slate-200 rounded-full"></div>
+            </div>
+            
+            <div class="space-y-20 relative">
+                <div class="flex items-start space-x-8 relative step-line">
+                    <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white font-bold z-10 shrink-0 shadow-lg">1</div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm w-full transition hover:border-blue-200">
+                        <h4 class="text-2xl font-bold mb-4 text-slate-900 flex items-center">
+                            <i class="fas fa-cog text-blue-600 mr-3"></i> Khởi tạo lớp học thông minh
+                        </h4>
+                        <p class="text-slate-600 mb-4">Giảng viên thiết lập thông tin ban đầu trên Dashboard quản trị cá nhân:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-slate-700"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <span><strong>Cấu hình lớp học:</strong> Nhập Mã lớp, Tên môn học và Email giảng viên phụ trách.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <span><strong>Kết nối lưu trữ:</strong> Dán link thư mục Google Drive gốc của môn học vào hệ thống.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i> <span><strong>Tự động hóa:</strong> Apps Script tự động khởi tạo lộ trình 18 buổi học và sơ đồ 8 thư mục Lab trong Drive.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-8 relative step-line">
+                    <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white font-bold z-10 shrink-0 shadow-lg">2</div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm w-full text-right transition hover:border-blue-200">
+                        <h4 class="text-2xl font-bold mb-4 text-slate-900 flex flex-row-reverse items-center">
+                            <i class="fas fa-map-marker-alt text-red-500 ml-3 mr-0"></i> Điểm danh xác thực Location
+                        </h4>
+                        <p class="text-slate-600 mb-4">Quy trình xác thực hiện diện minh bạch qua Google Chat:</p>
+                        <ul class="space-y-3 inline-block text-left">
+                            <li class="flex items-start text-slate-700"><i class="fas fa-fingerprint text-red-500 mt-1 mr-3"></i> <span><strong>Xác thực vị trí:</strong> Sinh viên sử dụng lệnh tương tác trên Bot để điểm danh ngay tại lớp.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-crosshairs text-red-500 mt-1 mr-3"></i> <span><strong>Đối soát GPS:</strong> Hệ thống so khớp tọa độ GPS thực tế của SV với vị trí máy giảng viên.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-shield-alt text-red-500 mt-1 mr-3"></i> <span><strong>Ghi nhận dữ liệu:</strong> Chỉ SV trong bán kính cho phép mới được ghi nhận trạng thái "Có mặt".</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-8 relative step-line">
+                    <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white font-bold z-10 shrink-0 shadow-lg">3</div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm w-full transition hover:border-blue-200">
+                        <h4 class="text-2xl font-bold mb-4 text-slate-900 flex items-center">
+                            <i class="fas fa-bell text-blue-600 mr-3"></i> Quét & Nhắc bài tự động
+                        </h4>
+                        <p class="text-slate-600 mb-4">Hệ thống đóng vai trò một trợ lý nhắc bài chuyên nghiệp:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-slate-700"><i class="fas fa-search text-blue-500 mt-1 mr-3"></i> <span><strong>Quét dữ liệu định kỳ:</strong> Tự động kiểm tra thư mục bài nộp 24h trước thời hạn (deadline).</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-user-check text-blue-500 mt-1 mr-3"></i> <span><strong>Đối soát thông minh:</strong> Tự động so khớp Mã SV có file nộp với danh sách lớp thực tế.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-paper-plane text-blue-500 mt-1 mr-3"></i> <span><strong>Thông báo đa kênh:</strong> Gửi Email nhắc nhở và tag tên trực tiếp trong Google Chat lớp.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-8 relative">
+                    <div class="w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center text-white font-bold z-10 shrink-0 shadow-lg">4</div>
+                    <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm w-full text-right transition hover:border-blue-200">
+                        <h4 class="text-2xl font-bold mb-4 text-slate-900 flex flex-row-reverse items-center">
+                            <i class="fas fa-chart-pie text-orange-500 ml-3 mr-0"></i> Tổng hợp Báo cáo Dashboard
+                        </h4>
+                        <p class="text-slate-600 mb-4">Quản lý toàn diện tiến độ lớp học qua màn hình duy nhất:</p>
+                        <ul class="space-y-3 inline-block text-left">
+                            <li class="flex items-start text-slate-700"><i class="fas fa-sync-alt text-orange-500 mt-1 mr-3"></i> <span><strong>Đồng bộ điểm Quiz:</strong> Tự động đẩy điểm thi từ ILIAS về bảng quản lý qua Extension.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-eye text-orange-500 mt-1 mr-3"></i> <span><strong>Cập nhật Real-time:</strong> Theo dõi trực quan tiến độ điểm danh và nộp bài của từng SV.</span></li>
+                            <li class="flex items-start text-slate-700"><i class="fas fa-user-graduate text-orange-500 mt-1 mr-3"></i> <span><strong>Cảnh báo sớm:</strong> Phát hiện sinh viên nguy cơ rớt môn để giảng viên kịp thời hỗ trợ.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-24 bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm overflow-hidden">
+            <h2 class="text-2xl font-bold mb-8 flex items-center text-slate-800">
+                <i class="fas fa-table text-blue-600 mr-4"></i> Cấu trúc dữ liệu Master (Google Sheets)
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-slate-400 border-b border-slate-100">
+                            <th class="py-4 text-left font-bold uppercase tracking-widest">Trang tính (Tab)</th>
+                            <th class="py-4 text-left font-bold uppercase tracking-widest">Dữ liệu quản lý trọng tâm</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-50">
+                        <tr><td class="py-5 font-bold text-blue-600 uppercase w-1/3">Lớp học</td><td class="py-5 italic text-slate-500">Mã Lớp, Tên Môn, Email GV phụ trách, Link Folder Gốc.</td></tr>
+                        <tr><td class="py-5 font-bold text-blue-600 uppercase">Sinh viên</td><td class="py-5 italic text-slate-500">Mã SV, Họ Tên, Email cá nhân, Mã Lớp đang theo học.</td></tr>
+                        <tr><td class="py-5 font-bold text-blue-600 uppercase">Nhật ký Điểm danh</td><td class="py-5 italic text-slate-500">Lịch trình 18 buổi, Thời gian Check-in, Tọa độ GPS thực tế.</td></tr>
+                        <tr><td class="py-5 font-bold text-blue-600 uppercase">Tiến độ Lab/Quiz</td><td class="py-5 italic text-slate-500">Trạng thái nộp Lab (1-8), Điểm Quiz, Theo dõi Deadline.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 py-16 text-white rounded-t-[4rem]">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-8 md:mb-0">
+                <p class="text-slate-400 text-sm italic mb-2">Chuyên nghiệp - Tự động - Minh bạch</p>
+                <h3 class="text-2xl font-extrabold tracking-widest text-blue-400">SMART MANAGEMENT SYSTEM</h3>
+            </div>
+            <div class="bg-white/5 border border-white/10 px-10 py-6 rounded-3xl text-center backdrop-blur-sm">
+                <p class="text-slate-400 text-xs font-bold uppercase mb-2 tracking-widest italic underline decoration-orange-500">Người thực hiện đề án</p>
+                <p class="text-white font-extrabold text-2xl uppercase tracking-tighter">Ông Mười Giáo <span class="text-blue-500">(OMG)</span></p>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-slate-600 text-[10px] font-bold tracking-[0.5em] uppercase">
+            © 2026 ALL RIGHTS RESERVED BY OMG SYSTEM
+        </div>
+    </footer>
+
+</body>
+</html>

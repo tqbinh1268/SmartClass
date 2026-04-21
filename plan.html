@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Plan - SmartClass FPL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+        body { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="sticky top-0 bg-white/90 backdrop-blur-md border-b z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="bg-blue-600 p-2 rounded-lg text-white"><i class="fas fa-microchip text-xl"></i></div>
+                    <span class="text-2xl font-bold tracking-tighter text-slate-800">SmartClass <span class="text-blue-600">FPL</span></span>
+                </a>
+            </div>
+            <div class="flex space-x-6 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-slate-400 hover:text-blue-600">Đề án</a>
+                <a href="plan.html" class="text-blue-600 border-b-2 border-blue-600 pb-1">Sprint Plan</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="text-4xl font-extrabold mb-4 italic text-slate-900 uppercase">Lộ trình triển khai (Sprint Plan)</h1>
+        <p class="text-slate-500 mb-12 italic underline decoration-blue-500 underline-offset-4">Dự án vận hành 100% trên Google Ecosystem</p>
+
+        <div class="space-y-8">
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 1</div>
+                <h3 class="text-xl font-bold mb-4 text-blue-600 uppercase"><i class="fas fa-database mr-3"></i>Data Foundation</h3>
+                <ul class="space-y-4 text-slate-600 text-sm">
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-blue-400"></i> Thiết lập Master Sheet Database (GiangVien, LopHoc, SinhVien [cite: 30]).</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-blue-400"></i> Viết hàm CRUD cơ bản trong Apps Script[cite: 19].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-blue-400"></i> Khởi tạo Dashboard quản trị trên AppSheet[cite: 24, 30].</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-slate-900 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 2</div>
+                <h3 class="text-xl font-bold mb-4 text-slate-900 uppercase"><i class="fas fa-robot mr-3"></i>Drive & Chat Bot</h3>
+                <ul class="space-y-4 text-slate-600 text-sm">
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Script tự động hóa tạo Folder Lab trên Drive[cite: 10, 30].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Phát triển Google Chat Bot: Nhận lệnh /lab và nộp bài[cite: 22].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Tự động đổi tên file đúng chuẩn PSxxxx_Ten_Labx.</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-slate-900 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 3</div>
+                <h3 class="text-xl font-bold mb-4 text-slate-900 uppercase"><i class="fas fa-satellite mr-3"></i>Check-in & Reminder</h3>
+                <ul class="space-y-4 text-slate-600 text-sm">
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Phát triển lệnh /checkin xác thực tọa độ GPS[cite: 7].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Hệ thống Remind tự động quét bài nộp trước 24h deadline[cite: 11].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Tự động gửi Email nhắc nhở cho sinh viên chưa nộp bài[cite: 11].</li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-slate-900 text-white px-6 py-2 rounded-bl-3xl font-bold text-xs uppercase tracking-widest">Sprint 4</div>
+                <h3 class="text-xl font-bold mb-4 text-slate-900 uppercase"><i class="fas fa-chart-line mr-3"></i>Analytics & Sync</h3>
+                <ul class="space-y-4 text-slate-600 text-sm">
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Chrome Extension trích xuất điểm Quiz từ LMS ILIAS[cite: 16, 17].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Hoàn thiện báo cáo Dashboard Real-time trên AppSheet[cite: 24].</li>
+                    <li class="flex items-center"><i class="far fa-square mr-3 text-slate-400"></i> Beta Test trên lớp thực tế và xuất bảng tổng hợp.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-12 text-slate-400 text-xs font-bold tracking-widest">
+        © 2026 SMART MANAGEMENT SYSTEM - OMG
+    </footer>
+</body>
+</html>
